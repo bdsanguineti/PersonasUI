@@ -6,6 +6,7 @@ import { NgFor } from '@angular/common';
   selector: 'app-personas',
   standalone: true,
   imports: [NgFor],
+  providers: [PersonaService],
   templateUrl: './personas.component.html',
   styleUrl: './personas.component.css'
 })
@@ -20,7 +21,7 @@ export class PersonasComponent implements OnInit {
   }
 
   fetchData(){
-    this.personaService.getPersonas().subscribe((data: any) => {
+    this.personaService.getPersonas().subscribe((data: any) => {      
       this.personas = data['response'];
       console.log("persona component fetch data", this.personas);
     });

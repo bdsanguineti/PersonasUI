@@ -1,0 +1,7 @@
+<div class="container mt-4" *ngIf="persona">
+    <h2>{{ persona.nombre }} {{ persona.apellido }}</h2>
+    <p>DNI: {{ persona.dni }}</p>
+    <p>Teléfono: {{ persona.telefono }}</p>
+    <p>Provincia ID: {{ persona.provinciaId }}</p>
+    <!-- <button class="btn btn-primary" [routerLink]="['/personas']">Volver</button> -->
+  </div>
